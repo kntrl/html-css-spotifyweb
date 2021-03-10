@@ -23,4 +23,82 @@ ul {
 ===================*/
 body {
     font-family: 'Montserrat', sans-serif;
+
+
+    /* CODICE DA RIVEDERE O CANCELLARE*/
+    background-color: #000;;
+    /* min-width: 250px; */
+    color:white;
+    /* FINE CODICE DA RIVEDERE O CANCELLARE*/
+}
+
+#app-wrapper {
+    height: 100vh;
+    width: 100%;
+}
+
+nav,
+footer,
+.upgrade {
+    overflow: hidden;
+}
+
+
+/* ================
+        MAIN
+===================*/
+main {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    height: calc( 100% - 80px);
+}
+
+.main-content {
+    background-color: #141922;
+    flex: 1;
+    overflow-Y: auto;
+    /* padding to avoid overlapping of upgrade bar */
+    padding-top: 80px;
+}
+
+/* ================
+        NAV
+===================*/
+nav {
+    flex: 0 0 240px;
+    background-color: black;
+}
+
+/* ================
+        FOOTER
+===================*/
+footer {
+    background-color: #282828;
+    height: 80px;
+}
+
+/* ================
+        UPGRADE
+===================*/
+.upgrade {
+    padding-right: 5px;
+    height: 80px;
+    position:fixed;
+    top:0;
+    right:0;
+    background-color: rgba(0,0,0,0.6);
+    text-align: right;
+    /* width is 100% - nav width */
+    width: calc( 100% - 240px);
+}
+
+.upgrade .button {
+    font-size: 0.7rem;
+    border: 1px solid #fff;
+    border-radius:25px;
+    padding: 10px 25px;
+    text-transform: uppercase;
+    /* line height equal to upgrade div height */
+    line-height: 80px;
 }
