@@ -8,6 +8,10 @@ padding: 0;
 box-sizing: border-box;
 }
 
+img {
+    width: 100%;
+}
+
 a,
 a:hover {
     text-decoration: none;
@@ -25,7 +29,6 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     /* CODICE DA RIVEDERE O CANCELLARE*/
-    background-color: #000;
     color:white;
     /* FINE CODICE DA RIVEDERE O CANCELLARE*/
 }
@@ -48,13 +51,26 @@ nav li.active {
 
 /* ================
  Padding & Margins
-===================*/
+=================== */
+
+.pb-10 {
+    padding-bottom: 20px;
+}
+
 .pb-20 {
     padding-bottom: 20px;
 }
 
 .mb-10 {
     margin-bottom:10px;
+}
+
+
+/* ================
+ Breakpoint's hidden
+=================== */
+.xs-visible {
+    display: none;
 }
 
 /* ================
@@ -97,11 +113,11 @@ nav h2 {
     font-size: 0.85rem;
 }
 
-nav :is(.logo,.app-menu,.playlist-menu,.user) {
+nav :is(.logo,.app-nav,.playlist-menu,.user) {
     overflow: hidden;
 }
 
-nav > *:not(.app-menu) {
+nav > *:not(.app-nav) {
     padding-left:20px;
 }
 
@@ -111,7 +127,10 @@ nav li {
 
 nav .icon {
     vertical-align: middle;
+    text-align: center;
     margin-right: 5px;
+    width: 25px;
+    display: inline-block;
 }
 /*   logo   */
 .logo {
@@ -119,17 +138,16 @@ nav .icon {
     padding-top: 15px;
 }
 
-.logo img {
+.logo-img {
     width: 150px;
 }
 
-/*  app-menu    */
-.app-menu li {
-    padding-left: 20px;
+.logo img.xs-visible {
+    padding: 5px;
 }
-
-.app-menu .icon img {
-    width: 25px;
+/*  app-menu    */
+.app-nav li {
+    padding-left: 20px;
 }
 
 /*  playlist-menu */
@@ -141,7 +159,6 @@ nav .icon {
 .playlist-menu .icon {
     background-color:#a3a3a3;
     color:#000;
-    text-align: center;
     font-size:1.5rem;
     height: 30px;
     width: 30px;
@@ -169,6 +186,31 @@ nav .icon {
 /*  user menu */
 .user {
     overflow:hidden;
+    padding:10px 20px 10px 0;
+}
+
+.download-app {
+    border-bottom: 1px solid #a3a3a3;
+}
+.dl-rounded-icon {
+    margin: 0 auto;
+    font-size: 0.5rem;
+    height: 12px;
+    width: 12px;
+    border: 1px solid #a3a3a3;
+    border-radius: 50%;
+}
+
+.user-name .icon {
+    border-radius: 50%;
+    background-color: #a3a3a3;
+    overflow: hidden;
+    height:25px;
+}
+
+.user-name {
+    color: #fff;
+    font-size: 0.9rem;
 }
 /* ================
         FOOTER
@@ -202,3 +244,48 @@ footer {
     /* line height equal to upgrade div height */
     line-height: 80px;
 }
+
+
+/* XS media query  */
+@media screen and ( max-width: 767px ) {
+    /* breakpoint-visible */
+    .xs-visible {
+        display:inline;
+    }
+
+    /* matching .upgrade size to main */
+    .upgrade {
+        width: calc( 100% - 40px)
+    }
+
+    /* nav */
+    nav {
+        flex: 0 0 40px;
+        text-align: center;
+        padding: 0px;       
+    }
+
+    nav li,
+    .nav .user,
+    nav > *:not(.app-nav) {
+        padding-left: 0!important;
+    }
+
+    nav .icon {
+        margin: 0px;
+    }
+
+    .xs-hidden {
+        display: none;
+    }
+
+    nav .user {
+        padding-right: 0;
+        margin: 0 auto;
+    }
+    .download-app {
+        border-bottom: 0;
+    }
+    
+}
+

@@ -24,22 +24,51 @@
                 <nav>
                     <!-- logo -->
                     <div class="logo">
-                        <img src="img/logo.svg" alt="Spotify - logo">
+                        <img class ="logo-img xs-hidden" src="img/logo.svg" alt="Spotify - logo">
+                        <img class ="xs-visible" src="img/logo-small.svg" alt="Spotify - logo">
                     </div>
                     <!-- app menu -->
-                    <div class="app-menu pb-20">
+                    <div class="app-nav pb-20">
                         <ul>
-                            <li class="active"><span class="icon"><img src="img/home.svg" alt="Home icon"></span><a href="">Home</a></li>
-                            <li><span class="icon"><img src="img/search.svg" alt="Search icon"></span><a href="">Cerca</a></li>
-                            <li><span class="icon"><img src="img/libreria.svg" alt="Library icon"></span><a href="">La tua libreria</a></li>
+                            <li class="active">
+                                <a href="">
+                                    <span class="icon">
+                                        <img src="img/home.svg" alt="Home icon">
+                                    </span>
+                                    <span class="nav-location xs-hidden">
+                                        Home
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span class="icon">
+                                        <img src="img/search.svg" alt="Search icon">
+                                    </span>
+                                    <span class="nav-location xs-hidden">
+                                        Cerca
+                                    </span>
+                                </a>
+                            <li>
+                                <a href="">
+                                    <span class="icon">
+                                        <img src="img/libreria.svg" alt="Library icon">
+                                    </span>
+                                    <span class="nav-location xs-hidden">
+                                        La tua libreria
+                                    </span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                     <!-- playlist menu -->
                     <div class="playlist-menu">
-                        <h2 class="mb-10">playlist</h2>
-                        <div class="button mb-10"><span class="icon">+</span> Crea Playlist</div>
+                        <h2 class="mb-10 xs-hidden">playlist</h2>
+                        <div class="button mb-10  xs-hidden">
+                            <span class="icon">+</span> Crea Playlist
+                        </div>
                         <!-- user's playlist list -->
-                        <ul>
+                        <ul class="xs-hidden">
                             <li><a href="">Nome Playlist</a></li>
                             <li><a href="">Nome Playlist</a></li>
                             <li><a href="">Nome Playlist</a></li>
@@ -51,7 +80,28 @@
                     </div>
                     <!-- user profile -->
                     <div class="user">
-                        user
+                        <div class="download-app pb-10 mb-10">
+                            <a href="">
+                                <span class="icon">
+                                    <div class="dl-rounded-icon">
+                                        <i class="fas fa-arrow-down"></i>
+                                    </div>
+                                </span>
+                                <span class="xs-hidden">
+                                    Installa app
+                                </span>                        
+                            </a>
+                        </div>
+                        <div class="user-name">
+                            <a href="">
+                                <span class="icon">
+                                    <img src="img/profile.svg" alt="User's Profile Photo">
+                                </span>
+                                <span class="user-name xs-hidden">
+                                    Pinco Pallo
+                                </span>
+                            </a>
+                        </div>
                     </div>
                 </nav>
             <!-- NAV ENDS -->
