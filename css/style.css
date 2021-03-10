@@ -354,6 +354,9 @@ footer {
     line-height: 80px;
 }
 
+.upgrade .button:hover {
+    font-size: 0.9rem;
+}
 
 /* XS media query  */
 @media screen and ( max-width: 767px ) {
