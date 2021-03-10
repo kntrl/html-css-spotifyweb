@@ -23,11 +23,8 @@ ul {
 ===================*/
 body {
     font-family: 'Montserrat', sans-serif;
-
-
     /* CODICE DA RIVEDERE O CANCELLARE*/
-    background-color: #000;;
-    /* min-width: 250px; */
+    background-color: #000;
     color:white;
     /* FINE CODICE DA RIVEDERE O CANCELLARE*/
 }
@@ -43,6 +40,14 @@ footer,
     overflow: hidden;
 }
 
+nav li.active {
+    border-left:3px solid #adff2f;
+}
+
+
+/* ================
+ Padding & Margins
+===================*/
 
 /* ================
         MAIN
@@ -65,11 +70,57 @@ main {
 /* ================
         NAV
 ===================*/
+
 nav {
     flex: 0 0 240px;
     background-color: black;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
 }
 
+nav :is(.logo,.app-menu,.playlist-menu,.user) {
+    overflow: hidden;
+}
+
+nav > *:not(.app-menu) {
+    padding-left:20px;
+}
+nav li {
+    padding: 5px 0;
+}
+
+nav .icon {
+    padding-right: 5px;
+    vertical-align: middle;
+}
+
+/*   logo   */
+.logo {
+    flex: 0 0 80px;
+    padding-top: 15px;
+}
+
+.logo img {
+    width: 150px;
+}
+
+/*  app-menu    */
+.app-menu li {
+    padding-left: 20px;
+}
+
+.app-menu .icon img {
+    width: 25px;
+}
+
+/*  playlist */
+.playlist-menu {
+    flex-grow: 1;
+}
+
+.user {
+}
 /* ================
         FOOTER
 ===================*/
