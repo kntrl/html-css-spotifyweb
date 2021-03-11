@@ -401,12 +401,14 @@ footer {
 }
 
 .now-playing .song-info {
-    padding: 0 1%;    
+    padding: 0 2%;    
 }
 
 .song-option {
+    flex-shrink: 1;
     display: flex;
     flex-flow: row wrap;
+    justify-content: flex-start;
 }
 
 .song-option i {
@@ -415,19 +417,17 @@ footer {
 }
 
 .song-option i:hover {
-    color:#fff;
+    color:#fff;    
+
+
 }
 
 /* player */
 .player {
     flex-grow: 1;
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
     padding: 0 10px;
 }
 .player-controls {
-    flex: 1 0 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -455,11 +455,11 @@ footer {
 }
 
 .song-length  {
-    flex: 0 1 60%;
+    flex: 0 1 50%;
 }
 
 .song-length-bar {
-    margin: auto 15px;
+    margin: auto 4%;
 }
 
 .song-length-bar .progress {
