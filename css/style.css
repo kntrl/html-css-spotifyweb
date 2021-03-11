@@ -77,7 +77,44 @@ footer,
     margin-bottom: 30px;
 }
 
+/* ================
+    slider control
+=================== */
 
+.slider {
+    border: 2px solid #5a5a5a;
+    border-radius:2px;
+    position:relative;
+}
+
+.slider.progress {
+    border-color: #a3a3a3;
+    position:absolute;
+    left: -2px;
+    top: -2px;
+    width: 40%;
+} 
+
+.slider.progress:hover {
+    cursor: pointer;
+    border-color: #adff2f;
+} 
+.slider.progress:hover .cursor{
+    display: block;
+}
+.cursor-container {
+    width: 100%;
+    position: relative;
+}
+
+.cursor {
+    position: absolute;
+    display:none;
+    /* vertical centering */
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%)
+}
 
 /* ================
  Breakpoint's hidden
@@ -335,7 +372,7 @@ footer {
     align-items: center;
 }
 
-footer .icon {
+footer .icon i{
     cursor: pointer;
 }
 
@@ -366,20 +403,28 @@ footer .icon {
     display: flex;
     flex-flow: row wrap;
 }
+
 .song-option i {
     padding: 0 5px;
+    color:#7d7f84;
+}
+
+.song-option i:hover {
+    color:#fff;
 }
 
 /* player */
 .player {
     flex-grow: 1;
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row wrap;
     align-items: center;
+    padding: 0 10px;
 }
 .player-controls {
+    flex: 1 0 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
@@ -391,13 +436,25 @@ footer .icon {
     font-size: 2rem;
 }
 
-.player-time  {
-    flex: 1;
+.player-controls .icon.play:hover {
+    font-size: 2.05rem;
 }
 
+.player-time  {
+    flex: 1 1 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content:center;
+    align-items: center;
+}
 
+.song-length  {
+    flex: 0 1 60%;
+}
 
-
+.song-lenght-bar {
+    margin: auto 30px;
+}
 
 
 /* ================
