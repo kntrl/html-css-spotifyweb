@@ -1,7 +1,6 @@
 /* ================
         RESETS
 ===================*/
-
 * {
 margin: 0;
 padding: 0;
@@ -28,9 +27,7 @@ ul {
 body {
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    /* CODICE DA RIVEDERE O CANCELLARE*/
-    color:white;
-    /* FINE CODICE DA RIVEDERE O CANCELLARE*/
+    color: #fff;
 }
 
 #app-wrapper {
@@ -43,6 +40,7 @@ footer,
 .upgrade {
     overflow: hidden;
 }
+
 /* ===============
        COMMON
 ==================*/
@@ -52,6 +50,11 @@ footer,
 
 .txt-center {
     text-align: center;
+}
+
+
+.icon i{
+    cursor: pointer;
 }
 
 /* ================
@@ -80,7 +83,6 @@ footer,
 /* ================
     slider control
 =================== */
-
 .slider {
     border: 2px solid #5a5a5a;
     border-radius:2px;
@@ -92,7 +94,6 @@ footer,
     position:absolute;
     left: -2px;
     top: -2px;
-    width: 40%;
 } 
 
 .slider.progress:hover {
@@ -101,6 +102,7 @@ footer,
 } 
 .slider.progress:hover .cursor{
     display: block;
+    font-size: 0.8rem;
 }
 .cursor-container {
     width: 100%;
@@ -149,7 +151,6 @@ main {
     color: #7d7f84;
 }
 
-
 /* =================
    main content nav
 ==================== */
@@ -163,6 +164,9 @@ main {
 
 .main-nav li {
     padding:20px 10px;
+}
+.main-nav a:hover {
+    color: #fff;
 }
 
 .main-nav .active {
@@ -310,6 +314,7 @@ nav .icon {
     height: 30px;
     width: 30px;
     display: inline-block;
+    cursor: pointer;
 }
 
 .button:hover {
@@ -370,10 +375,6 @@ footer {
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-}
-
-footer .icon i{
-    cursor: pointer;
 }
 
 /* now playing */
@@ -453,12 +454,42 @@ footer .icon i{
     flex: 0 1 60%;
 }
 
-.song-lenght-bar {
+.song-length-bar {
     margin: auto 15px;
+}
+
+.song-length-bar .progress {
+    width: 40%;
 }
 .elapsed, 
 .duration {
     font-size: 0.6rem;
+}
+
+/* play-option */
+
+.play-option {
+    flex: 0 1 180px;
+}
+
+.play-option ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-items: space-between;
+    align-items: center;
+}
+
+.play-option li {
+    flex-grow: 1;
+}
+
+.play-option li.volume {
+    flex: 0 0 50%;
+}
+
+/* volume */
+.volume .progress {
+    width: 80%;
 }
 
 
