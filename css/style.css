@@ -440,6 +440,7 @@ footer .icon i{
     font-size: 2.05rem;
 }
 
+/* player time */
 .player-time  {
     flex: 1 1 100%;
     display: flex;
@@ -453,7 +454,11 @@ footer .icon i{
 }
 
 .song-lenght-bar {
-    margin: auto 30px;
+    margin: auto 15px;
+}
+.elapsed, 
+.duration {
+    font-size: 0.6rem;
 }
 
 
