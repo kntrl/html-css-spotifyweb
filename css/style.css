@@ -328,7 +328,77 @@ nav .icon {
 footer {
     background-color: #282828;
     height: 80px;
+    padding: 0 5px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
 }
+
+footer .icon {
+    cursor: pointer;
+}
+
+/* now playing */
+.now-playing {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    flex: 0 1 220px;
+}
+
+.now-playing .song {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.now-playing .song-cover {
+    width: 50px;
+}
+
+.now-playing .song-info {
+    padding: 0 5px;    
+}
+
+.song-option {
+    display: flex;
+    flex-flow: row wrap;
+}
+.song-option i {
+    padding: 0 5px;
+}
+
+/* player */
+.player {
+    flex-grow: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+.player-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.player-controls .icon {
+    padding: 0 20px;
+}
+
+.player-controls .icon.play {
+    font-size: 2rem;
+}
+
+.player-time  {
+    flex: 1;
+}
+
+
+
+
+
 
 /* ================
         UPGRADE
