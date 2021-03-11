@@ -183,7 +183,6 @@ main {
 /* ===============
     album styling    
 ================== */
-
 .album-container{
     display: flex;
     flex-flow: row wrap;
@@ -245,14 +244,14 @@ main {
 
 nav {
     flex: 0 0 240px;
-    background-color: black;
+    background-color: #000;
     color:#7d7f84;
     display: flex;
     flex-direction: column;
     font-size: 0.8rem;
 }
 
-nav  :is(a:hover,h2) {
+nav :is(a:hover,h2) {
     color:#fff;
 }
 
@@ -475,12 +474,13 @@ footer {
 .play-option ul {
     display: flex;
     flex-flow: row nowrap;
-    justify-items: space-between;
+    justify-content: space-between;
     align-items: center;
 }
 
 .play-option li {
     flex-grow: 1;
+    padding: 0 3px;
 }
 
 .play-option li.volume {
@@ -566,6 +566,12 @@ footer {
     }
     .download-app {
         border-bottom: 0;
+    }
+
+    /* FOOTER */
+    /* padding goin from fixed to % */
+    footer .player-controls .icon {
+        padding: 0 3%;
     }
 }
 
