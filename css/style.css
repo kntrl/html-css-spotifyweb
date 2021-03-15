@@ -333,7 +333,6 @@ nav .icon {
     /* 100% minus section h2 and crea playlist button widths*/
     /* so that scrollbar appears as soon as playlist is overlapped. */
     height: calc(100% - 66px);
-    min-height: 80px;
 }
 
 .playlist-menu li {
