@@ -28,6 +28,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     color: #fff;
+    background-color: #141922;
 }
 
 #app-wrapper {
@@ -52,7 +53,6 @@ footer,
     text-align: center;
 }
 
-
 .icon i{
     cursor: pointer;
 }
@@ -60,7 +60,6 @@ footer,
 /* ================
     Padding & Margins
 =================== */
-
 .pb-10 {
     padding-bottom: 10px;
 }
@@ -139,7 +138,6 @@ main {
     main content 
 ==================== */
 .main-content {
-    background-color: #141922;
     flex: 1;
     overflow-Y: auto;
     /* padding top avoids overlapping of upgrade bar */
@@ -269,13 +267,6 @@ nav h2 {
     font-size: 0.85rem;
 }
 
-nav .logo,
-nav .app-nav,
-nav .playlist-menu,
-nav .user {
-    overflow: hidden;
-}
-
 nav > *:not(.app-nav) {
     padding-left:20px;
 }
@@ -316,6 +307,7 @@ nav .icon {
 /*  playlist-menu */
 .playlist-menu {
     flex-grow: 1;
+    overflow: hidden;
 }
 
 .playlist-menu .icon {
@@ -341,6 +333,7 @@ nav .icon {
     /* 100% minus section h2 and crea playlist button widths*/
     /* so that scrollbar appears as soon as playlist is overlapped. */
     height: calc(100% - 66px);
+    min-height: 80px;
 }
 
 .playlist-menu li {
@@ -349,7 +342,6 @@ nav .icon {
 
 /*  user menu */
 .user {
-    overflow:hidden;
     padding:10px 20px 10px 0;
 }
 
