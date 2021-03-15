@@ -133,8 +133,8 @@ main {
     display: flex;
     flex-flow: row nowrap;
     height: calc( 100% - 80px);
-}
 
+}
 /* =================
     main content 
 ==================== */
@@ -144,6 +144,14 @@ main {
     overflow-Y: auto;
     /* padding top avoids overlapping of upgrade bar */
     padding: 80px 10px 10px;
+    /* hiding scrollbar keeping the functionality */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* hiding scrollbar keeping the functionality */
+.main-content::-webkit-scrollbar {  
+    display: none;  /* Chrome, Safari and Opera */
 }
 
 .primary {
@@ -368,6 +376,7 @@ nav .icon {
     color: #fff;
     font-size: 0.9rem;
 }
+
 /* ================
         FOOTER
 ===================*/
@@ -377,7 +386,6 @@ footer {
     padding: 0 10px;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
     align-items: center;
 }
 
@@ -390,20 +398,15 @@ footer {
 }
 
 .now-playing .song {
-    flex: 1 1 ;
+    flex: 2 1 ;
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
 
 .now-playing .song-cover {
-    
     width:50px;
     padding-right:5px;
-}
-
-.now-playing .song-info {
-    flex: 1 1 ;
 }
 
 .now-playing .song-title {
@@ -415,10 +418,17 @@ footer {
 }
 
 .song-option {
-    flex: 1 1 ;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     justify-content: space-evenly;
+    align-items: center;
+}
+
+/* avoiding song-option to become horizontal again when switching to smaller padding of player controls icons */
+@media screen and (max-width: 451px) {
+    .song-option {
+        flex-flow: column nowrap;
+    }
 }
 
 .song-option i {
@@ -433,7 +443,7 @@ footer {
 /* player */
 .player {
     flex-grow: 1;
-    padding: 0 5px;
+    padding: 0 15px;
 }
 .player-controls {
     display: flex;
@@ -457,7 +467,8 @@ footer {
 }
 
 .player-controls .icon.play:hover {
-    font-size: 2.05rem;
+    /* font-size: 2.05rem; */
+    transform: scale(1.1);
 }
 
 
